@@ -17,3 +17,7 @@
 :set tabstop=2
 :set shiftwidth=2
 :set expandtab
+
+" Show characters
+" from: https://www.reddit.com/r/vim/comments/4hoa6e/what_do_you_use_for_your_listchars/
+:set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
