@@ -21,3 +21,17 @@
 " Show characters
 " from: https://www.reddit.com/r/vim/comments/4hoa6e/what_do_you_use_for_your_listchars/
 :set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+
+" Automatic Tasks On Save (Anderson)
+let g:autoformat_on_save = 0
+function! ExternalFormat(command)
+  if g:autoformat_on_save
+    silent execute('!' . a:command) | edit!
+  endif
+endfunction
+
+augroup tasks_on_save
+  autocmd!
+  autocmd BufWritePost *.py call ExternalFormat('black --line-length=79 %')
+augroup END
