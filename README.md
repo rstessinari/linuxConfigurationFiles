@@ -1,6 +1,11 @@
 # linuxConfigurationFiles
 My personal repository of Linux configuration files (e.g., .vimrc).
 
+# Cheat sheets:
+- VIM https://devhints.io/vim
+- GIT https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
+- Literate development (emacs+doom) http://www.howardism.org/Technical/Emacs/literate-devops.html
+
 # VIM configuration:
 - Display lines from: https://jeffkreeftmeijer.com/vim-number/
 - Change tab size from: https://stackoverflow.com/questions/2054627/how-do-i-change-tab-size-in-vim
