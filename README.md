@@ -2,9 +2,9 @@
 My personal repository of Linux configuration files (e.g., .vimrc).
 
 # Cheat sheets:
-- VIM https://devhints.io/vim
-- GIT https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
-- Literate development (emacs+doom) http://www.howardism.org/Technical/Emacs/literate-devops.html
+- VIM: https://devhints.io/vim
+- GIT: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
+- Literate development (emacs+doom): http://www.howardism.org/Technical/Emacs/literate-devops.html
 
 # VIM configuration:
 - Display lines from: https://jeffkreeftmeijer.com/vim-number/
@@ -33,3 +33,18 @@ Examples:
 
 3. Install your Linux Distribution of Choice:
 * Ubuntu 18.04: https://www.microsoft.com/store/apps/9N9TNGVNDL3Q
+
+# Installing emacs + doom on Windows + WSL
+
+On the host windows:
+
+1. install vcxsrv: https://sourceforge.net/projects/vcxsrv/
+
+On the wsl linux:
+
+2. sudo add-apt-repository ppa:kelleyk/emacs
+3. sudo apt-get update
+4. sudo apt-get install emacs26 zsh ssh-askpass
+5. download vcxsrv.zsh , emacs.vbs , and emacs.launcher.zsh files from https://github.com/rstessinari/linuxConfigurationFiles
+6. change the location of the zsh files in the emacs.launcher.zsh
+7. give +x permission to the *.zsh files
