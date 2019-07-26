@@ -16,3 +16,15 @@ Examples:
 > vim file -c 'retab' -c 'wq'
 
 > vim file +retab +wq
+
+# Windows Subsystem for Linux (WSL)
+
+### From here: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+1. Open PowerShell as Administrator and run:
+> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+2. Restart your computer when prompted.
+
+3. Install your Linux Distribution of Choice:
+* Ubuntu 18.04: https://www.microsoft.com/store/apps/9N9TNGVNDL3Q
