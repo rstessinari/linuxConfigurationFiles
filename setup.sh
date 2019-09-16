@@ -2,3 +2,6 @@
 
 echo "Creating ~/.vimrc"
 cp vimrc ~/.vimrc
+
+echo "Creating ~/.bashrc"
+cp bashrc ~/.bashrc
