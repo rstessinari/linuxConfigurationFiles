@@ -22,6 +22,11 @@ Examples:
 
 > vim file +retab +wq
 
+# Bashrc
+1. Disabling alert sound:
+> bind 'set bell-style none'
+
+
 # Windows Subsystem for Linux (WSL)
 
 ### From here: https://docs.microsoft.com/en-us/windows/wsl/install-win10
