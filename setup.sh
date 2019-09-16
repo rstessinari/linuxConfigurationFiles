@@ -3,5 +3,7 @@
 echo "Creating ~/.vimrc"
 cp vimrc ~/.vimrc
 
-echo "Creating ~/.bashrc"
-cp bashrc ~/.bashrc
+echo "Disabling terminal alert sound"
+echo "" >> ~/.bashrc
+echo "# Mude sound" >> ~/.bashrc
+echo "bind 'set bell-style none'" >> ~/.bashrc
