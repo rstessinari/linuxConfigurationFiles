@@ -35,3 +35,7 @@ augroup tasks_on_save
   autocmd!
   autocmd BufWritePost *.py call ExternalFormat('black --line-length=79 %')
 augroup END
+
+
+" Disable bell alert
+set noeb vb t_vb=
