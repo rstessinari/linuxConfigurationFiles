@@ -53,3 +53,23 @@ On the wsl linux:
 5. download vcxsrv.zsh , emacs.vbs , and emacs.launcher.zsh files from https://github.com/rstessinari/linuxConfigurationFiles
 6. change the location of the zsh files in the emacs.launcher.zsh
 7. give +x permission to the *.zsh files
+
+
+# Docker
+## Installing Docker:
+Check https://docs.docker.com/install/linux/docker-ce/ubuntu/ for changes. (last update: 2019-09-18)
+> sudo apt-get update
+> sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+Add Docker’s official GPG key:
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+Set up the stable repository:
+> sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+> sudo apt-get update
+
+Install the Docker Engine:
+> sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+Check if the installation is ok:
+> sudo docker run hello-world
