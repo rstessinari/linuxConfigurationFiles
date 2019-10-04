@@ -36,6 +36,25 @@ augroup tasks_on_save
   autocmd BufWritePost *.py call ExternalFormat('black --line-length=79 %')
 augroup END
 
-
 " Disable bell alert
 set noeb vb t_vb=
+
+" Anderson config
+augroup fix_shiftwidth
+  autocmd!
+  autocmd BufNewFile,BufRead {*.rst,*.py} setlocal shiftwidth=4 tabstop=4 textwidth=79
+  autocmd FileType javascript.jsx setlocal shiftwidth=2 tabstop=2 textwidth=79
+  autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+augroup END
+
+augroup missing_filetypes
+  autocmd!
+  autocmd BufNewFile,BufRead *.gsl setlocal filetype=gsl
+  autocmd BufNewFile,BufRead {*.make,*.mk} setlocal filetype=make noexpandtab
+  autocmd BufNewFile,BufRead {*.pylintrc,pylintrc,.coafile} setlocal filetype=cfg
+augroup END
+
+augroup set_spell
+  autocmd!
+  autocmd Filetype {text,markdown,rst} set spell
+augroup END
