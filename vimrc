@@ -15,8 +15,12 @@
 " https://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
 
 :set tabstop=2
+:set softtabstop=2
 :set shiftwidth=2
 :set expandtab
+:set textwidth=79        " default wrapping
+:set backspace=indent,eol,start
+" ^  allow backspacing over everything in insert mode
 
 " Show characters
 " from: https://www.reddit.com/r/vim/comments/4hoa6e/what_do_you_use_for_your_listchars/
