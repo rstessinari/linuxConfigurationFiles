@@ -73,3 +73,17 @@ Install the Docker Engine:
 
 Check if the installation is ok:
 > sudo docker run hello-world
+
+# Visual Code
+## rulers
+https://stackoverflow.com/questions/29968499/vertical-rulers-in-visual-studio-code
+
+VS Code 0.10.10 introduced this feature. To configure it, go to File > Preferences > Settings and add this to to your user or workspace settings:
+
+"editor.rulers": [80,120]
+
+The color of the rulers can be customized like this:
+
+"workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ff4081"
+}
