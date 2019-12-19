@@ -87,3 +87,25 @@ The color of the rulers can be customized like this:
 "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081"
 }
+
+# Python
+## Python Scaffold
+install pyscaffold:
+
+"pipx install pyscafold[all]" or "pip3 install pyscafold[all]"
+
+putup --help for options
+
+putup --pre-commit --tox --url GITURL --force FOLDER
+
+follow instructions
+
+
+## Create venv
+
+python3 -m venv .venv
+
+source .venv/bin/activate
+
+deactivate
+
