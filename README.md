@@ -109,3 +109,8 @@ source .venv/bin/activate
 
 deactivate
 
+## Check installed packages and save them
+
+pip3 freeze > requirements.txt
+
+pip3 install -r requirements.txt
