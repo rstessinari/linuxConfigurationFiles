@@ -98,7 +98,17 @@ putup --help for options
 
 putup --pre-commit --tox --url GITURL --namespace _NAMESPACE_ --package _PACKAGE_ --force FOLDER
 
-follow instructions
+follow instructions:
+
+- pip3 install pre-commit
+
+- pre-commit install
+
+- copy the .pre-commit-config.yaml
+
+- pre-commit autoupdate
+
+- pre-commit run --all
 
 
 ## Create venv
