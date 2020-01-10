@@ -96,7 +96,7 @@ install pyscaffold:
 
 putup --help for options
 
-putup --pre-commit --tox --url GITURL --namespace _NAMESPACE_ --package _PACKAGE_ --force FOLDER
+putup --pre-commit --tox --url GITURL --namespace _NAMESPACE_ --package _PACKAGE_ --force _FOLDER_
 
 follow instructions:
 
