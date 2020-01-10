@@ -104,7 +104,7 @@ follow instructions:
 
 - pre-commit install
 
-- copy the .pre-commit-config.yaml
+- copy the .pre-commit-config.yaml (remove the two black entries if Python version is not at least 3.6)
 
 - pre-commit autoupdate
 
