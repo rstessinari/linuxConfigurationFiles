@@ -22,10 +22,19 @@ Examples:
 
 > vim file +retab +wq
 
-# Bashrc
+# Linux
+## Bashrc
 1. Disabling alert sound:
 > bind 'set bell-style none'
 
+## SSH without password
+a@A:~> ssh-keygen -t rsa
+
+Append a's new public key to b@B:.ssh/authorized_keys and enter b's password one last time:
+
+a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
+
+Source: http://www.linuxproblem.org/art_9.html
 
 # Windows Subsystem for Linux (WSL)
 
