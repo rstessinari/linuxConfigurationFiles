@@ -30,11 +30,16 @@ Examples:
 ## SSH without password
 a@A:~> ssh-keygen -t rsa
 
-Append a's new public key to b@B:.ssh/authorized_keys and enter b's password one last time:
+Append a's new public key to b@B:.ssh/authorized_keys and enter b's password one last time (Source: http://www.linuxproblem.org/art_9.html):
 
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
 
-Source: http://www.linuxproblem.org/art_9.html
+OR (and better)
+
+a@A:~> ssh-copy-id b@B
+
+
+
 
 # Windows Subsystem for Linux (WSL)
 
