@@ -138,3 +138,28 @@ deactivate
 pip3 freeze > requirements.txt
 
 pip3 install -r requirements.txt
+
+
+## Install Protobuf on Linux
+
+Find the correct protocol buffers version based on your Linux Distro: https://github.com/google/protobuf/releases
+
+wget it
+
+# Unzip
+> unzip protoc-3.5.1-linux-x86_64.zip -d protoc3
+
+# Move protoc to /usr/local/bin/
+> sudo mv protoc3/bin/* /usr/local/bin/
+
+# Move protoc3/include to /usr/local/include/
+> sudo mv protoc3/include/* /usr/local/include/
+
+# Optional: change owner
+> sudo chown [user] /usr/local/bin/protoc
+
+> sudo chown -R [user] /usr/local/include/google
+
+If some problem happen, try to install these:
+
+> sudo apt-get install autoconf automake libtool curl make g++ unzip
