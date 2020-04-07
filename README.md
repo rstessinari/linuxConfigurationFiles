@@ -163,3 +163,17 @@ wget it
 If some problem happen, try to install these:
 
 > sudo apt-get install autoconf automake libtool curl make g++ unzip
+
+
+# Install Java and Intellij Idea
+Install java sdk
+
+> sudo apt install openjdk-8-jdk
+
+Download Intellij Idea https://www.jetbrains.com/idea/download/#section=linux
+
+> sudo tar -zxvf ideaIC-VERSION.tar.gz -C /opt/
+
+To run it:
+
+> ./opt/ideaIC-VERSION/bin/idea.sh
