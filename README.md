@@ -177,3 +177,38 @@ Download Intellij Idea https://www.jetbrains.com/idea/download/#section=linux
 To run it:
 
 > ./opt/ideaIC-VERSION/bin/idea.sh
+
+
+# Change the Default Editor From Nano on Ubuntu Linux
+> sudo update-alternatives --config editor
+
+# Redo last command but as root
+> sudo !!
+
+# Open an editor to run a command
+> ctrl+x+e
+
+# Create a ram disk
+> sudo mkdir -p /mnt/ram
+
+> sudo mount -t tmpfs tmpfs /mnt/ram -o size=8192M
+
+> sudo umount /mnt/ram
+
+# Don't add command to history (add a leading space before the command)
+>  ls -l
+
+# Fix a really long command that you messed up
+> fc
+
+# Tunnel with ssh (local port 3337 -> remote host's 127.0.0.1 on port 6379)
+> ssh -L 3337:127.0.0.1:6379 root@emkc.org -N
+
+# Quickly create folders
+mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
+
+# Intercept stdout and log to file
+> cat file | tee -a log | cat > /dev/null
+
+# Exit terminal but leave all processes running
+> disown -a && exit
