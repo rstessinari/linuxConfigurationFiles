@@ -80,7 +80,6 @@ mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
 > disown -a && exit
 
 
-
 # Windows Subsystem for Linux (WSL)
 
 ### From here: https://docs.microsoft.com/en-us/windows/wsl/install-win10
@@ -107,6 +106,14 @@ On the wsl linux:
 5. download vcxsrv.zsh , emacs.vbs , and emacs.launcher.zsh files from https://github.com/rstessinari/linuxConfigurationFiles
 6. change the location of the zsh files in the emacs.launcher.zsh
 7. give +x permission to the *.zsh files
+
+### Change terminal colors
+
+Right-click title bar and select "Properties", and follow the steps:
+1. select "Screen Text" and note which color box got highlighted
+2. select 10th color box where the dark blue color is
+3. set rgb values to 59,120,255 (or your favorite blue)
+4. select the color box noted in the first step
 
 
 # Docker
