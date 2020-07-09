@@ -1,17 +1,18 @@
 # linuxConfigurationFiles
-My personal repository of Linux configuration files (e.g., .vimrc).
+My personal repository of Linux configuration files, tips, tricks, and personalisation.
 
 # Cheat sheets:
 - VIM: https://devhints.io/vim
 - GIT: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 - Literate development (emacs+doom): http://www.howardism.org/Technical/Emacs/literate-devops.html
 
-# VIM configuration:
+# VIM 
+### Configuration:
 - Display lines from: https://jeffkreeftmeijer.com/vim-number/
 - Change tab size from: https://stackoverflow.com/questions/2054627/how-do-i-change-tab-size-in-vim
 - Show special chars: https://www.reddit.com/r/vim/comments/4hoa6e/what_do_you_use_for_your_listchars/
 
-## Useful commands:
+### Useful commands:
 Modify files with vim without open the file:
 > vim file -c command
 
@@ -22,12 +23,18 @@ Examples:
 
 > vim file +retab +wq
 
+### Disable vim bell sounds
+```
+" Disable bell alert
+set noeb vb t_vb=
+```
+
 # Linux
-## Bashrc
+### Bashrc
 1. Disabling alert sound:
 > bind 'set bell-style none'
 
-## SSH without password
+### SSH without password
 a@A:~> ssh-keygen -t rsa
 
 Append a's new public key to b@B:.ssh/authorized_keys and enter b's password one last time (Source: http://www.linuxproblem.org/art_9.html):
@@ -38,6 +45,39 @@ OR (and better)
 
 a@A:~> ssh-copy-id b@B
 
+### Change the Default Editor From Nano on Ubuntu Linux
+> sudo update-alternatives --config editor
+
+### Redo last command but as root
+> sudo !!
+
+### Open an editor to run a command
+> ctrl+x+e
+
+### Create a ram disk
+> sudo mkdir -p /mnt/ram
+
+> sudo mount -t tmpfs tmpfs /mnt/ram -o size=8192M
+
+> sudo umount /mnt/ram
+
+### Don't add command to history (add a leading space before the command)
+>  ls -l
+
+### Fix a really long command that you messed up
+> fc
+
+### Tunnel with ssh (local port 3337 -> remote host's 127.0.0.1 on port 6379)
+> ssh -L 3337:127.0.0.1:6379 root@emkc.org -N
+
+### Quickly create folders
+mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
+
+### Intercept stdout and log to file
+> cat file | tee -a log | cat > /dev/null
+
+### Exit terminal but leave all processes running
+> disown -a && exit
 
 
 
@@ -53,7 +93,7 @@ a@A:~> ssh-copy-id b@B
 3. Install your Linux Distribution of Choice:
 * Ubuntu 18.04: https://www.microsoft.com/store/apps/9N9TNGVNDL3Q
 
-# Installing emacs + doom on Windows + WSL
+### Installing emacs + doom on Windows + WSL
 
 On the host windows:
 
@@ -70,7 +110,7 @@ On the wsl linux:
 
 
 # Docker
-## Installing Docker:
+### Installing Docker:
 Check https://docs.docker.com/install/linux/docker-ce/ubuntu/ for changes. (last update: 2019-09-18)
 > sudo apt-get update
 > sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
@@ -89,7 +129,7 @@ Check if the installation is ok:
 > sudo docker run hello-world
 
 # Visual Code
-## rulers
+### rulers
 https://stackoverflow.com/questions/29968499/vertical-rulers-in-visual-studio-code
 
 VS Code 0.10.10 introduced this feature. To configure it, go to File > Preferences > Settings and add this to to your user or workspace settings:
@@ -103,7 +143,7 @@ The color of the rulers can be customized like this:
 }
 
 # Python
-## Python Scaffold
+### Python Scaffold
 install pyscaffold:
 
 "pipx install pyscafold[all]" or "pip3 install pyscafold[all]"
@@ -125,7 +165,7 @@ follow instructions:
 - pre-commit run --all
 
 
-## Create venv
+### Create venv
 
 python3 -m venv .venv
 
@@ -133,29 +173,31 @@ source .venv/bin/activate
 
 deactivate
 
-## Check installed packages and save them
+### Check installed packages and save them
 
 pip3 freeze > requirements.txt
 
 pip3 install -r requirements.txt
 
 
-## Install Protobuf on Linux
+# Software/Library
+
+### Install Protobuf on Linux
 
 Find the correct protocol buffers version based on your Linux Distro: https://github.com/google/protobuf/releases
 
 wget it
 
-# Unzip
+Unzip
 > unzip protoc-3.5.1-linux-x86_64.zip -d protoc3
 
-# Move protoc to /usr/local/bin/
+Move protoc to /usr/local/bin/
 > sudo mv protoc3/bin/* /usr/local/bin/
 
-# Move protoc3/include to /usr/local/include/
+Move protoc3/include to /usr/local/include/
 > sudo mv protoc3/include/* /usr/local/include/
 
-# Optional: change owner
+Optional: change owner
 > sudo chown [user] /usr/local/bin/protoc
 
 > sudo chown -R [user] /usr/local/include/google
@@ -165,7 +207,7 @@ If some problem happen, try to install these:
 > sudo apt-get install autoconf automake libtool curl make g++ unzip
 
 
-# Install Java and Intellij Idea
+### Install Java and Intellij Idea
 Install java sdk
 
 > sudo apt install openjdk-8-jdk
@@ -177,38 +219,3 @@ Download Intellij Idea https://www.jetbrains.com/idea/download/#section=linux
 To run it:
 
 > ./opt/ideaIC-VERSION/bin/idea.sh
-
-
-# Change the Default Editor From Nano on Ubuntu Linux
-> sudo update-alternatives --config editor
-
-# Redo last command but as root
-> sudo !!
-
-# Open an editor to run a command
-> ctrl+x+e
-
-# Create a ram disk
-> sudo mkdir -p /mnt/ram
-
-> sudo mount -t tmpfs tmpfs /mnt/ram -o size=8192M
-
-> sudo umount /mnt/ram
-
-# Don't add command to history (add a leading space before the command)
->  ls -l
-
-# Fix a really long command that you messed up
-> fc
-
-# Tunnel with ssh (local port 3337 -> remote host's 127.0.0.1 on port 6379)
-> ssh -L 3337:127.0.0.1:6379 root@emkc.org -N
-
-# Quickly create folders
-mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
-
-# Intercept stdout and log to file
-> cat file | tee -a log | cat > /dev/null
-
-# Exit terminal but leave all processes running
-> disown -a && exit
