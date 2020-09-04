@@ -232,7 +232,7 @@ To run it:
 ## Port foward in Linux
 
 https://serverfault.com/questions/125625/how-to-forward-connection-from-one-interface-to-another-under-linux
-How to forward connection from one interface to another under linuxI have linux box which has two network interface, eth0, eth1. from eth1 I can access an internal website, say under port 8080. from outside the box, I can't access that network. my question is, is ...serverfault.com​[18:18] Abubakar Siddique Muqaddas
+How to forward connection from one interface to another under linuxI have linux box which has two network interface, eth0, eth1. from eth1 I can access an internal website, say under port 8080. from outside the box, I can't access that network. my question is, is ...serverfault.com
     
 sudo iptables -t nat -A PREROUTING -p tcp -d 10.68.48.142 --dport 5010 -j DNAT --to 127.0.0.1:5005
     
