@@ -226,3 +226,14 @@ Download Intellij Idea https://www.jetbrains.com/idea/download/#section=linux
 To run it:
 
 > ./opt/ideaIC-VERSION/bin/idea.sh
+
+
+
+## Port foward in Linux
+
+https://serverfault.com/questions/125625/how-to-forward-connection-from-one-interface-to-another-under-linux
+How to forward connection from one interface to another under linuxI have linux box which has two network interface, eth0, eth1. from eth1 I can access an internal website, say under port 8080. from outside the box, I can't access that network. my question is, is ...serverfault.com​[18:18] Abubakar Siddique Muqaddas
+    
+sudo iptables -t nat -A PREROUTING -p tcp -d 10.68.48.142 --dport 5010 -j DNAT --to 127.0.0.1:5005
+    
+sudo iptables -A FORWARD -p tcp -d 127.0.0.1 --dport 5005 -j ACCEPT
