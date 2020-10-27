@@ -111,7 +111,7 @@ source: https://askubuntu.com/questions/767577/how-can-i-remove-gnome-desktop-en
 > sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
 
 ### Installing VLC and OBS for video streaming
-VLC (Client and Server sides):
+- VLC (Client and Server sides):
 
 > sudo add-apt-repository ppa:videolan/master-daily
 
@@ -119,7 +119,15 @@ VLC (Client and Server sides):
 
 > sudo apt install vlc qtwayland5
 
-OBS (Client side only):
+- Allow VLC to run with sudo. Source:
+
+> sudo apt-get install bless
+
+> sudo bless /usr/bin/vlc
+
+Search and change the geteuid string by getppid, save and exit.
+
+- OBS (Client side only):
 
 > sudo add-apt-repository ppa:obsproject/obs-studio
 
