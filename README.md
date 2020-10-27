@@ -79,6 +79,16 @@ mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
 ### Exit terminal but leave all processes running
 > disown -a && exit
 
+### Connect to Ubuntu using the Remote Desktop software:
+here: http://c-nergy.be/blog/?p=8952
+
+> sudo apt-get update
+
+> sudo apt-get install xrdp
+
+> sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
+
+Add mate-session to file /etc/xrdp/startwm.sh
 
 # Windows Subsystem for Linux (WSL)
 
