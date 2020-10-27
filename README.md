@@ -79,16 +79,53 @@ mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
 ### Exit terminal but leave all processes running
 > disown -a && exit
 
-### Connect to Ubuntu using the Remote Desktop software:
+### Connect to Ubuntu using the Remote Desktop software
 here: http://c-nergy.be/blog/?p=8952
 
 > sudo apt-get update
 
 > sudo apt-get install xrdp
 
+Install Mate (see bellow)
+
+Add mate-session to file /etc/xrdp/startwm.sh (just before the X11/Xsession line)
+
+### Removing gnome-DE
+source: https://askubuntu.com/questions/767577/how-can-i-remove-gnome-desktop-environment-without-messing-unity-de-ubuntu-16
+
+> sudo apt-get remove ubuntu-gnome-desktop
+
+> sudo apt-get remove gnome-shell 
+
+> sudo apt-get remove --auto-remove ubuntu-gnome-desktop
+
+> sudo apt-get purge ubuntu-gnome-desktop
+
+> sudo apt-get purge --auto-remove ubuntu-gnome-desktop
+
+> sudo apt-get autoremove 
+
+### Installing Mate-DE
+> sudo apt-get update
+
 > sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
 
-Add mate-session to file /etc/xrdp/startwm.sh
+### Installing VLC and OBS for video streaming
+VLC (Client and Server sides):
+
+> sudo add-apt-repository ppa:videolan/master-daily
+
+> sudo apt update
+
+> sudo apt install vlc qtwayland5
+
+OBS (Client side only):
+
+> sudo add-apt-repository ppa:obsproject/obs-studio
+
+> sudo apt update
+
+> sudo apt-get install obs-studio
 
 # Windows Subsystem for Linux (WSL)
 
