@@ -6,6 +6,20 @@ My personal repository of Linux configuration files, tips, tricks, and personali
 - GIT: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 - Literate development (emacs+doom): http://www.howardism.org/Technical/Emacs/literate-devops.html
 
+# VSCODE
+### Favorite extensions:
+- Bracket Pair Colorizer 2: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
+- Indent Rainbow: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
+- Auto Rename Tag: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+- Auto Close Tag: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
+- REST Client: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+- Remote - SSH: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh
+- Remote - WSL: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
+- Python: https://marketplace.visualstudio.com/items?itemName=ms-python.python
+- Graphviz (dot) language support for Visual Studio Code: https://marketplace.visualstudio.com/items?itemName=joaompinto.vscode-graphviz
+- Material Theme Icons: https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons
+- Community Material Theme: https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-community-material-theme
+
 # VIM 
 ### Configuration:
 - Display lines from: https://jeffkreeftmeijer.com/vim-number/
