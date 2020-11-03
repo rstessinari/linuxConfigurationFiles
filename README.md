@@ -7,6 +7,7 @@ My personal repository of Linux configuration files, tips, tricks, and personali
 - TMUX: https://tmuxcheatsheet.com/
 - VSCODE: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - Literate development (emacs+doom): http://www.howardism.org/Technical/Emacs/literate-devops.html
+- CSS resources: https://www.w3schools.com/css/default.asp
 
 # VSCODE
 ### Favorite extensions:
