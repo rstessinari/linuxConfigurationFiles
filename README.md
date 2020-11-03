@@ -4,6 +4,8 @@ My personal repository of Linux configuration files, tips, tricks, and personali
 # Cheat sheets:
 - VIM: https://devhints.io/vim
 - GIT: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
+- TMUX: https://tmuxcheatsheet.com/
+- VSCODE: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - Literate development (emacs+doom): http://www.howardism.org/Technical/Emacs/literate-devops.html
 
 # VSCODE
