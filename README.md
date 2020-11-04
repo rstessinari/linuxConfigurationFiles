@@ -261,6 +261,10 @@ pip3 install -r requirements.txt
 
 # Software/Library
 
+### OBS next/prev scene plugin
+
+https://obsproject.com/forum/resources/next-scene-and-previous-scene-hotkeys.1018/
+
 ### Install Protobuf on Linux
 
 Find the correct protocol buffers version based on your Linux Distro: https://github.com/google/protobuf/releases
