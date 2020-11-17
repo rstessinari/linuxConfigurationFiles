@@ -52,15 +52,9 @@ set noeb vb t_vb=
 > bind 'set bell-style none'
 
 ### SSH without password
-a@A:~> ssh-keygen -t rsa
+a@local-hostA:~$ ssh-keygen -t rsa
 
-Append a's new public key to b@B:.ssh/authorized_keys and enter b's password one last time (Source: http://www.linuxproblem.org/art_9.html):
-
-a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
-
-OR (and better)
-
-a@A:~> ssh-copy-id b@B
+a@local-host:~$ ssh-copy-id -i ~/.ssh/id_rsa.pub b@remote-host
 
 ### Change the Default Editor From Nano on Ubuntu Linux
 > sudo update-alternatives --config editor
