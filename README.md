@@ -90,7 +90,7 @@ mkdir -p folder/{sub1,sub2}/{sub1,sub2,sub3}
 ### Exit terminal but leave all processes running
 > disown -a && exit
 
-### Connect to Ubuntu using the Remote Desktop software
+## Connect to Ubuntu using the Remote Desktop software
 here: http://c-nergy.be/blog/?p=8952
 
 > sudo apt-get update
