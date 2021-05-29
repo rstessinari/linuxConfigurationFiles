@@ -307,3 +307,27 @@ How to forward connection from one interface to another under linuxI have linux 
 sudo iptables -t nat -A PREROUTING -p tcp -d 10.68.48.142 --dport 5010 -j DNAT --to 127.0.0.1:5005
     
 sudo iptables -A FORWARD -p tcp -d 127.0.0.1 --dport 5005 -j ACCEPT
+
+# Python
+### Print with colours:
+Look for ANSI colors. Some sample:
+* Black: \u001b[30m
+* Red: \u001b[31m
+* Green: \u001b[32m
+* Yellow: \u001b[33m
+* Blue: \u001b[34m
+* Magenta: \u001b[35m
+* Cyan: \u001b[36m
+* White: \u001b[37m
+* Reset: \u001b[0m
+
+then, use like this:
+
+```Python
+c = [
+    "\033[91m",  # Red
+    "\033[35m"  # Magenta
+]
+print(c[0]+'This line is red until here,'+'\033[0m'+' now it is white again.')
+```
+
