@@ -232,6 +232,8 @@ Install/update repositories
 > pip3 install --upgrade pip
 > 
 > pip3 install --upgrade distlib
+>
+> sudo apt install python3.9-venv
 
 Change 3.6 with the previous installed version. If this method was used already in the past, just add the newer python version.
 > sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
