@@ -216,6 +216,43 @@ The color of the rulers can be customized like this:
 }
 
 # Python
+### Update to a newer version
+
+Install/update repositories
+> sudo add-apt-repository ppa:deadsnakes/ppa
+> 
+> sudo apt-get update
+> 
+> sudo apt-get install python3.9 
+
+> sudo apt install python3.9-distutils 
+> 
+> pip3 install --upgrade setuptools
+> 
+> pip3 install --upgrade pip
+> 
+> pip3 install --upgrade distlib
+
+Change 3.6 with the previous installed version. If this method was used already in the past, just add the newer python version.
+> sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+> 
+> sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
+> 
+> sudo update-alternatives --config python3
+
+(optional) Update python alias as well
+> sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+> 
+> sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 2
+> 
+> sudo update-alternatives --config python
+
+Check if it worked:
+> python -V
+> 
+> python3 -V
+
+
 ### Python Scaffold
 install pyscaffold:
 
