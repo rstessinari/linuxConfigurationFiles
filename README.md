@@ -370,3 +370,10 @@ c = [
 print(c[0]+'This line is red until here,'+'\033[0m'+' now it is white again.')
 ```
 
+# Development on Windows
+### Install SSL certificates on git
+1. Download github certificate (cert.pem) (not the chain) using firefox (check link below on how to do it) and save it to "myfolder"
+2. Configure git: 
+    > git config --global http.sslCAInfo C:\...\myfolder\cert.pem
+
+source: https://jhooq.com/2-ways-to-fix-ssl-certificate-problem-self-signed-certificate-in-certificate-chain/#git-clone
