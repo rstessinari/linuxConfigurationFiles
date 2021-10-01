@@ -10,8 +10,11 @@ My personal repository of Linux configuration files, tips, tricks, and personali
 - CSS resources: https://www.w3schools.com/css/default.asp
 
 # VSCODE
+### Enabling colourised brackets:
+Add this item to JSON settings:
+> "editor.bracketPairColorization.enabled": true,
+
 ### Favorite extensions:
-- Bracket Pair Colorizer 2: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
 - Indent Rainbow: https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
 - Auto Rename Tag: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
 - Auto Close Tag: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
