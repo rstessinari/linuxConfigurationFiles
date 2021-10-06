@@ -219,6 +219,13 @@ The color of the rulers can be customized like this:
 }
 
 # Python
+### Make pip use a certificate:
+Temporary solution:
+> $ pip --cert /PATH/CERTIFICATE_FILE.pem
+
+Permanent solution:
+> $ pip config set global.cert path/to/certificate.pem
+
 ### Update to a newer version
 
 Install/update repositories
