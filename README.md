@@ -55,9 +55,37 @@ set noeb vb t_vb=
 > bind 'set bell-style none'
 
 ### SSH without password
+#### Linux
 a@local-hostA:~$ ssh-keygen -t rsa
 
 a@local-host:~$ ssh-copy-id -i ~/.ssh/id_rsa.pub b@remote-host
+
+#### Windows
+
+Install OpenSSH using powershell
+
+Generate your keys:
+
+> ssh-keygen
+
+To add the keys to the local Windows 10 keystore, run the following:
+
+> Start-Service ssh-agent
+
+> ssh-add .\.ssh\id_rsa
+
+Copy id_rsa.pub file to the remote machine, and then
+
+> cat id_rsa.pub >> .ssh/authorized_keys
+
+> rm id_rsa.pub
+
+Give the correct permissions
+
+> chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
+
+Source: https://howchoo.com/linux/ssh-login-without-password
+
 
 ### Change the Default Editor From Nano on Ubuntu Linux
 > sudo update-alternatives --config editor
