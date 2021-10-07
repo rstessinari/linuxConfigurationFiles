@@ -247,15 +247,7 @@ The color of the rulers can be customized like this:
 }
 
 # Python
-### Make pip use a certificate:
-Temporary solution:
-> $ pip --cert /PATH/CERTIFICATE_FILE.pem
-
-Permanent solution:
-> $ pip config set global.cert path/to/certificate.pem
-
 ### Update to a newer version
-
 Install/update repositories
 > sudo add-apt-repository ppa:deadsnakes/ppa
 > 
@@ -408,17 +400,7 @@ c = [
 print(c[0]+'This line is red until here,'+'\033[0m'+' now it is white again.')
 ```
 
-# Development on Windows
-### Install SSL certificates on git
-1. Download github certificate (cert.pem) (not the chain) using firefox (check link below on how to do it) and save it to "myfolder"
-2. Configure git: 
-    > git config --global http.sslCAInfo C:\...\myfolder\cert.pem
-
-source: https://jhooq.com/2-ways-to-fix-ssl-certificate-problem-self-signed-certificate-in-certificate-chain/#git-clone
-
-
 # Advanced debuging on Linux:
-
 ### Strace
 The strace command is a powerful debugging and diagnostic tool in Linux. It records every system call and the response it receives by a particular process. It is similar to the truss tool in other Unix-like operating systems. So, you can debug a program without needing to read its code. It is also a great tool to learn about system calls.
 
@@ -428,3 +410,19 @@ source: https://www.linuxfordevices.com/tutorials/linux/strace-command
 In Linux, binary executables usually load shared libraries at runtime. Sometimes, we’d like to have an overview of which libraries are going to be loaded when a program starts.
 
 source: https://www.baeldung.com/linux/show-shared-libraries-executables
+
+
+# Development under Firewalls of death and pain
+### Install SSL certificates on git
+1. Download github certificate (cert.pem) (not the chain) using firefox (check link below on how to do it) and save it to "myfolder"
+2. Configure git: 
+    > git config --global http.sslCAInfo C:\...\myfolder\cert.pem
+
+source: https://jhooq.com/2-ways-to-fix-ssl-certificate-problem-self-signed-certificate-in-certificate-chain/#git-clone
+
+### Install SSL certificates on pip
+Temporary solution:
+> $ pip --cert /PATH/CERTIFICATE_FILE.pem
+
+Permanent solution:
+> $ pip config set global.cert path/to/certificate.pem
