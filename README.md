@@ -420,6 +420,16 @@ source: https://www.baeldung.com/linux/show-shared-libraries-executables
 
 source: https://jhooq.com/2-ways-to-fix-ssl-certificate-problem-self-signed-certificate-in-certificate-chain/#git-clone
 
+If it fails or you break stuff and start to get the dreadful GnuTLS -110 error*, the remaining solution is downloading stuff on windows and then copy it to the linux machine, remember to do this (to fix potencial issues with windows \r\n end of line
+
+> git config --global core.autocrlf input # or false, instead of input
+
+then revert back to true
+
+> git config --global core.autocrlf true
+
+* GnuTLS recv error (-110): The TLS connection was non-properly terminated
+
 ### Install SSL certificates on pip
 Temporary solution:
 > $ pip --cert /PATH/CERTIFICATE_FILE.pem
