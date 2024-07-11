@@ -1,0 +1,56 @@
+// vscode config
+{
+  // highlight
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.rulers": [
+    {
+      "column": 88,
+      "color": "#fcec91"
+    }
+  ],
+  "explorer.compactFolders": false,
+  "indentRainbow.excludedLanguages": ["svelte", "plaintext"],
+
+  // themes
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Dracula",
+
+  // files
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.associations": {
+    "*.py": "python"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true,
+    "**/*venv*": true
+  },
+
+  // python
+  "python.analysis.autoSearchPaths": false,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "Pylance",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  
+  // ruff
+  "ruff.fixAll": true,
+  "ruff.lint.args": ["--config=qkdv2/qkd-kms-core/pyproject.toml"],
+  "ruff.organizeImports": true,
+  // powershell / corp policies
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-ExecutionPolicy", "Bypass"]
+    }
+  }
+}
